@@ -1,12 +1,4 @@
 <?php
-/**
- * Template Name: Weddings and Events
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Floral_Shop
- */
-
 get_header();
 ?>
 
@@ -18,10 +10,16 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			$acf_one = get_field('description');
+      $acf_two = get_field('slideshow');
+
+			if ($acf_one) {
+				echo '<p class="description">' . $acf_one . '</p>';
+			}
+
+			// if ($acf_two) {
+			// 	echo '<img class="slideshow" src="' . $acf_two . '">';
+			// }
 
 		endwhile; // End of the loop.
 		?>
@@ -29,5 +27,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
