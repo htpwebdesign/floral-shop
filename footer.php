@@ -12,18 +12,26 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'floral-shop' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'floral-shop' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'floral-shop' ), 'floral-shop', '<a href="https://floralshop.bcitwebdeveloper.ca/">FWD35</a>' );
-				?>
+		<div class="contact-us">
+			<h2>Contact Us</h2>
+				<ul>
+					<li><a href="mailto:">Email</a></li>
+					<li>555 Seymour St, Vancouver, BC V6B 3H6</li>
+					<li>555-555-5555</li>
+					<li>Insert Social Media Icons</li>
+				</ul>
+		</div>
+		<div class="delivery-areas">
+			<h2>Delivery Areas</h2>
+				<ul>
+					<li>Vancouver</li>
+					<li>Burnaby</li>
+					<li>Richmond</li>
+					<li>Surrey</li>
+					<li>Langley</li>
+					<li>Delta</li>
+					<li>Abbotsford</li>
+				</ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

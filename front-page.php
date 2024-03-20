@@ -43,11 +43,27 @@ get_header();
 
         <?php
         if ($acf_six) {
-          echo '<div class="featured products">' . $acf_six . '</div>';
-        }
+          echo '<div class="featured products">';
+          foreach ($acf_six as $product) {
+              echo '<div class="product">';
+              echo '<h2>' . get_the_title($product->ID) . '</h2>';
+              echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
+              echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
+              echo '</div>';
+          }
+          echo '</div>';
+      }
         
         if ($acf_seven) {
-          echo '<div class="home_subscription">' . $acf_seven . '</div>';
+          echo '<div class="home_subscription">';
+          foreach ($acf_seven as $product) {
+              echo '<div class="product">';
+              echo '<h2>' . get_the_title($product->ID) . '</h2>';
+              echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
+              echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
+              echo '</div>';
+          }
+          echo '</div>';
         }
 
 		endwhile; // End of the loop.
