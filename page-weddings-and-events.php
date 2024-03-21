@@ -10,16 +10,15 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			$acf_one = get_field('description');
-      $acf_two = get_field('slideshow');
+			if (function_exists('get_field')) {
+				$acf_one = get_field('description');
+				$acf_two = get_field('slideshow');
 
-			if ($acf_one) {
-				echo '<p class="description">' . $acf_one . '</p>';
+				if ($acf_one) {
+					echo '<p class="description">' . $acf_one . '</p>';
+				}
+
 			}
-
-			// if ($acf_two) {
-			// 	echo '<img class="slideshow" src="' . $acf_two . '">';
-			// }
 
 		endwhile; // End of the loop.
 		?>

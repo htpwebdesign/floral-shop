@@ -10,15 +10,13 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			$acf_one = get_field('delivery_information');
-      $acf_two = get_field('image_of_map');
+			if (function_exists('get_field')) {
+				$acf_one = get_field('delivery_information');
+				$acf_two = get_field('image_of_map');
 
-			if ($acf_one) {
-				echo '<p class="delivery_information">' . $acf_one . '</p>';
-			}
-
-			if ($acf_two) {
-				echo '<img class="image_of_map" src="' . $acf_two . '">';
+				if ($acf_one) {
+					echo '<p class="delivery_information">' . $acf_one . '</p>';
+				}
 			}
 
 		endwhile; // End of the loop.

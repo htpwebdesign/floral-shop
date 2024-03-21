@@ -10,6 +10,7 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
     
+      if (function_exists('get_field')) {
         $acf_one = get_field('banner_image');
         $acf_two = get_field('slogan');
         $acf_three = get_field('blurb');
@@ -19,7 +20,7 @@ get_header();
         $acf_seven = get_field('home_subscription');
 
         if ($acf_one) {
-          echo '<img class="banner_image" src="' . $acf_one . '">';
+          echo wp_get_attachment_image( $acf_one, 'full' );
         }
 
         if ($acf_two) {
@@ -52,7 +53,7 @@ get_header();
               echo '</div>';
           }
           echo '</div>';
-      }
+        }
         
         if ($acf_seven) {
           echo '<div class="home_subscription">';
@@ -65,7 +66,7 @@ get_header();
           }
           echo '</div>';
         }
-
+      }
 		endwhile; // End of the loop.
 		?>
 
