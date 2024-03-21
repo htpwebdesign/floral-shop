@@ -47,7 +47,7 @@ get_header();
           echo '<article class="featured products">';
           foreach ($acf_six as $product) {
               $product_permalink = get_permalink($product->ID);
-              echo '<a href="' . esc_url($product_permalink) . '">'
+              echo '<a href="' . esc_url($product_permalink) . '">';
               echo '<div class="product">';
               echo '<h2>' . get_the_title($product->ID) . '</h2>';
               echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
@@ -62,7 +62,7 @@ get_header();
           echo '<article class="home_subscription">';
           foreach ($acf_seven as $product) {
               $product_permalink = get_permalink($product->ID);
-              echo '<a href="' . esc_url($product_permalink) . '">'
+              echo '<a href="' . esc_url($product_permalink) . '">';
               echo '<div class="product">';
               echo '<h2>' . get_the_title($product->ID) . '</h2>';
               echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
