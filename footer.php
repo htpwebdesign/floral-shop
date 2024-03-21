@@ -12,7 +12,7 @@
 						$acf_three = get_field('footer_phone', 27);
 
 						if ($acf_one) {
-							echo '<p class="footer_email"><a href="' . $acf_one . '">Email</p>';
+							echo '<p class="footer_email"><a href="' . $acf_one . '">Email</p></a>';
 						}
 
 						if ($acf_two) {
