@@ -18,7 +18,9 @@ get_header();
         $acf_five = get_field('cta_link');
         $acf_six = get_field('featured_products');
         $acf_seven = get_field('home_subscription');
-
+        ?>
+        <div class="home_banner">
+        <?php
         if ($acf_one) {
           echo wp_get_attachment_image( $acf_one, 'full' );
         }
@@ -30,8 +32,10 @@ get_header();
         if ($acf_three) {
           echo '<p class="blurb">' . $acf_three . '</p>';
         }
-        ?><div class="home_cta">
+        ?>
+        </div>
 
+        <div class="home_cta">
         <?php
         if ($acf_five) {
           echo '<a class="cta_link" href="' . $acf_five . '">';
