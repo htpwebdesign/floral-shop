@@ -12,7 +12,7 @@
 						$acf_three = get_field('footer_phone', 27);
 
 						if ($acf_one) {
-							echo '<p class="footer_email"><a href="' . $acf_one . '">Email</p></a>';
+							echo '<p class="footer_email"><a href="' . $acf_one . '">Email</a></p>';
 						}
 
 						if ($acf_two) {
@@ -32,7 +32,7 @@
 						$acf_four = get_field('footer_delivery', 27);
 
 						if ($acf_four) {
-							echo '<p class="footer_delivery">' . $acf_four . '</p>';
+							echo '<p class="footer_delivery"><a href="' . $acf_four . '">Lower Mainland of BC</a></p>';
 						}
 					}
 				?>
