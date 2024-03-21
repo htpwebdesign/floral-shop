@@ -44,27 +44,33 @@ get_header();
 
         <?php
         if ($acf_six) {
-          echo '<div class="featured products">';
+          echo '<article class="featured products">';
           foreach ($acf_six as $product) {
+              $product_permalink = get_permalink($product->ID);
+              echo '<a href="' . esc_url($product_permalink) . '">'
               echo '<div class="product">';
               echo '<h2>' . get_the_title($product->ID) . '</h2>';
               echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
               echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
               echo '</div>';
+              echo '</a>';
           }
-          echo '</div>';
+          echo '</article>';
         }
         
         if ($acf_seven) {
-          echo '<div class="home_subscription">';
+          echo '<article class="home_subscription">';
           foreach ($acf_seven as $product) {
+              $product_permalink = get_permalink($product->ID);
+              echo '<a href="' . esc_url($product_permalink) . '">'
               echo '<div class="product">';
               echo '<h2>' . get_the_title($product->ID) . '</h2>';
               echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
               echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
               echo '</div>';
+              echo '</a>';
           }
-          echo '</div>';
+          echo '</article>';
         }
       }
 		endwhile; // End of the loop.
