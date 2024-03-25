@@ -4,7 +4,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="contact-us">
-			<h2>Contact Us</h2>
+			<h2><?php _e('Contact Us', 'floral-shop'); ?></h2>
 				<?php
 					if (function_exists('get_field')) {
 						$acf_one = get_field('footer_email', 27);
@@ -26,7 +26,7 @@
 				?>
 		</div>
 		<div class="delivery-areas">
-			<h2>Delivery Areas</h2>
+			<h2><?php _e('Delivery Areas', 'floral-shop'); ?></h2>
 				<?php
 					if (function_exists('get_field')) {
 						$acf_four = get_field('footer_delivery', 27);
