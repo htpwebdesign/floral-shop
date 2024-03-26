@@ -5,4 +5,9 @@ h4,
 h5,
 h6 {
 	clear: both;
+	color: $color__text-body;
+	font-family: $font__h;
+	font-weight: $font__weight_h;
+	font-size: 1rem;
+	line-height: $font__line-height-h;
 }
