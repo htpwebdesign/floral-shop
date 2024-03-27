@@ -28,8 +28,7 @@
 			$acf_six = get_field('featured_products');
 			$acf_seven = get_field('home_subscription');
 			?>
-			<div class="home_hero">
-			<div class="home_banner">
+			
 			<?php
 			if (function_exists('get_field')) {
 				$acf_eight = get_field('delivery_information');
@@ -51,6 +50,8 @@
 			the_content();
 
 			if ($acf_one) {
+				echo '<div class="home_hero">';
+				echo '<div class="home_banner">';
 				echo wp_get_attachment_image( $acf_one, 'full' );
 			}
 
@@ -60,20 +61,22 @@
 
 			if ($acf_three) {
 				echo '<p class="blurb">' . $acf_three . '</p>';
+				echo '</div>';
 			}
 			?>
-			</div>
+		
 
-			<div class="home_cta">
 			<?php
 			if ($acf_five) {
+				echo '<div class="home_cta">';
 				echo '<a class="cta_link" href="' . $acf_five . '">';
 			}
 			if ($acf_four) {
 				echo '<p class="cta_text">' . $acf_four . '</p>';
+				echo '</a></div></div>';
 			}
 		
-			?></a></div></div>
+			?>
 
 			<?php
 			if ($acf_six) {
