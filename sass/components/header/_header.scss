@@ -1,29 +1,30 @@
-// Base styles for the navigation
+
 nav.main-navigation {
-    background: rgb(243, 141, 227);
+    background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 button.menu-toggle {
+    padding: 30px;
+    padding-bottom: 0px;
+    position: relative;
+    display: block;
+    cursor: pointer;
     background: none;
     border: 0;
-    cursor: pointer;
-    display: none; // Initially hide the hamburger menu button
-    padding: 10px;
-    position: relative;
 
     &:focus {
         outline: none;
     }
 }
 
-// Hamburger icon lines
+
 .hamburger-icon,
 .hamburger-icon:before,
 .hamburger-icon:after {
-    background-color: #333;
+    background-color: black;
     content: "";
     display: block;
     height: 2px;
@@ -60,11 +61,11 @@ button.menu-toggle {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none; // Initially hide the menu on mobile
+    display: none; 
 }
 
 .main-navigation li {
-    margin: 5px 0; // Adjust for vertical spacing on mobile
+    margin: 5px 0; 
 }
 
 .main-navigation a {
@@ -82,29 +83,29 @@ button.menu-toggle {
 // Responsive Styling
 @media (max-width: 768px) {
     button.menu-toggle {
-        display: block; // Show the hamburger menu button on small screens
+        display: block; 
     }
 
     .main-navigation.toggled ul {
-        display: flex; // Display the menu in a flex container when toggled
-        flex-direction: column; // Stack items vertically in mobile view
-        align-items: center; // Center items for mobile view
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
 }
 
 @media (min-width: 769px) {
     .main-navigation ul {
-        display: flex; // Ensure the menu is visible on larger screens
-        justify-content: center; // Horizontal layout for menu items
-        flex-direction: row; // Align items horizontally for desktop
+        display: flex; 
+        justify-content: center; 
+        flex-direction: row; 
     }
 
     .main-navigation li {
-        margin: 0 15px; // Restore original margin for horizontal layout
+        margin: 0 15px; 
     }
 
     button.menu-toggle {
-        display: none; // Ensure the toggle button is hidden on larger screens
+        display: none; 
     }
 }
 
