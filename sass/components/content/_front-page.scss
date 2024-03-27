@@ -1,0 +1,44 @@
+.home_hero {
+  position: relative;
+  text-align: center;
+}
+
+.home_banner img {
+  width: 100vw;
+  height: auto;
+  overflow: visible;
+}
+
+.slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blurb {
+  position: absolute;
+}
+
+.home_cta {
+  position: absolute;
+}
+
+.featured_products {
+  background-color: $color__brand-color;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	@media screen and (min-width: 48em) {
+		width: 85%;
+	}
+	@media screen and (min-width: 64em) {
+		width: 75%
+	}
+	@media screen and (min-width: 100em) {
+		width: 65%
+	}
+	@media screen and (min-width: 120em) {
+		width: 55%
+	}
+}
