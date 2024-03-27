@@ -1,6 +1,9 @@
+<<<<<<< Updated upstream
+=======
 // Base styles for the navigation
 nav.main-navigation {
-    background: rgb(243, 141, 227);
+    background-color: $color__brand-color;
+    color: $color__text-header;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -69,14 +72,14 @@ button.menu-toggle {
 
 .main-navigation a {
     text-decoration: none;
-    color: #333;
+    color: $color__text-header;
     font-weight: bold;
     padding: 10px;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-    color: #0073e6;
+    color: $color__text-header
 }
 
 // Responsive Styling
@@ -118,3 +121,4 @@ button.menu-toggle {
   
   
 
+>>>>>>> Stashed changes
