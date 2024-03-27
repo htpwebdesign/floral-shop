@@ -18,7 +18,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content();
+		
 
 		if (function_exists('get_field')) {
 			$acf_one = get_field('delivery_information');
@@ -36,6 +36,8 @@
 			}
 
 		}
+
+		the_content();
 
 		wp_link_pages(
 			array(
