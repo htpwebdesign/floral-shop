@@ -1,0 +1,120 @@
+// Base styles for the navigation
+nav.main-navigation {
+    background: rgb(243, 141, 227);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+button.menu-toggle {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: none; // Initially hide the hamburger menu button
+    padding: 10px;
+    position: relative;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// Hamburger icon lines
+.hamburger-icon,
+.hamburger-icon:before,
+.hamburger-icon:after {
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 30px;
+}
+
+.hamburger-icon {
+    top: 10px;
+}
+
+.hamburger-icon:before {
+    top: -8px;
+}
+
+.hamburger-icon:after {
+    top: 8px;
+}
+
+.main-navigation.toggled button.menu-toggle .hamburger-icon {
+    background: transparent;
+
+    &:before {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    &:after {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; // Initially hide the menu on mobile
+}
+
+.main-navigation li {
+    margin: 5px 0; // Adjust for vertical spacing on mobile
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+    color: #0073e6;
+}
+
+// Responsive Styling
+@media (max-width: 768px) {
+    button.menu-toggle {
+        display: block; // Show the hamburger menu button on small screens
+    }
+
+    .main-navigation.toggled ul {
+        display: flex; // Display the menu in a flex container when toggled
+        flex-direction: column; // Stack items vertically in mobile view
+        align-items: center; // Center items for mobile view
+    }
+}
+
+@media (min-width: 769px) {
+    .main-navigation ul {
+        display: flex; // Ensure the menu is visible on larger screens
+        justify-content: center; // Horizontal layout for menu items
+        flex-direction: row; // Align items horizontally for desktop
+    }
+
+    .main-navigation li {
+        margin: 0 15px; // Restore original margin for horizontal layout
+    }
+
+    button.menu-toggle {
+        display: none; // Ensure the toggle button is hidden on larger screens
+    }
+}
+
+
+
+
+
+
+  
+ 
+  
+  
+
