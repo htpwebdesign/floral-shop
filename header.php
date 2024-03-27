@@ -29,17 +29,28 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'floral-shop' ); ?></a>
 
+<<<<<<< Updated upstream
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
 			$floral_shop_description = get_bloginfo( 'description', 'display' );
 			if ( $floral_shop_description || is_customize_preview() ) :
+=======
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'floral-shop'); ?></a>
+
+		<header id="masthead" class="site-header">
+			<div class="site-branding">
+				<?php
+				if (is_front_page() && is_home()) :
+>>>>>>> Stashed changes
 				?>
 				<p class="site-description"><?php echo $floral_shop_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+<<<<<<< Updated upstream
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'floral-shop' ); ?></button>
 			<?php
@@ -52,3 +63,25 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+=======
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				the_custom_logo();
+				?>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="hamburger-icon"></span>
+					<?php esc_html_e('', 'floral-shop'); ?>
+				</button>
+
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->
+>>>>>>> Stashed changes
