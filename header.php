@@ -42,9 +42,12 @@
 		</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
+				
+				<div class="logo">
 				<?php
 				the_custom_logo();
 				?>
+				</div>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 					<span class="hamburger-icon"></span>
 					<?php esc_html_e('', 'floral-shop'); ?>

@@ -1,8 +1,11 @@
 .description {
     margin: 3rem;
-    font-size: large;
+    font-size: $font__size-paragraph;
+    line-height: $font__line-height-body;
 }
 
 .entry-title {
     margin: 3rem;
+    font-size: $font__size-title;
+    color: $color__brand-color;
 }
