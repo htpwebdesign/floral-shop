@@ -84,3 +84,78 @@
 		color: $woocommerce__color-error;
 	}
 }
+
+.sku_wrapper,
+.tabs {
+	display: none;
+}
+
+.woocommerce-breadcrumb,
+.entry-summary {
+	background-color: $color__background;
+	margin: 20px auto;
+	width: 100%;
+	max-width: 1200px;
+	
+	@media screen and (min-width: 30em) {
+		width: 95%;
+	}
+	@media screen and (min-width: 48em) {
+		width: 85%;
+	}
+	@media screen and (min-width: 64em) {
+		width: 75%
+	}
+	@media screen and (min-width: 100em) {
+		width: 65%
+	}
+	@media screen and (min-width: 120em) {
+		width: 55%
+	}
+}
+
+.woocommerce-message {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 0;
+	max-width: 50%;
+	margin: 0 auto;
+	& a {
+		color: $color__text-body;
+	}
+}
+
+.entry-summary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.entry-summary h1 {
+	text-align: center;
+	margin: 14px;
+}
+
+.wc-tabs-wrapper {
+	background-color: $color__background;
+	margin: 70px auto 40px;
+	width: 100%;
+	max-width: 1200px;
+	@media screen and (min-width: 30em) {
+		width: 95%;
+	}
+	@media screen and (min-width: 48em) {
+		width: 85%;
+	}
+	@media screen and (min-width: 64em) {
+		width: 75%
+	}
+	@media screen and (min-width: 100em) {
+		width: 65%
+	}
+	@media screen and (min-width: 120em) {
+		width: 55%
+	}
+}

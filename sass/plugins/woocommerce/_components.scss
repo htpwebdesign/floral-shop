@@ -275,3 +275,29 @@ p.no-comments {
 		}
 	}
 }
+
+.wc-block-cart {
+	display: flex;
+	flex-direction: column;
+	background-color: $color__background;
+	margin: 20px auto;
+	width: 100%;
+	max-width: 1200px;
+	align-items: center;
+	
+	@media screen and (min-width: 30em) {
+		width: 95%;
+	}
+	@media screen and (min-width: 48em) {
+		width: 85%;
+	}
+	@media screen and (min-width: 64em) {
+		width: 75%
+	}
+	@media screen and (min-width: 100em) {
+		width: 65%
+	}
+	@media screen and (min-width: 120em) {
+		width: 55%
+	}
+}

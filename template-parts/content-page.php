@@ -84,10 +84,10 @@
 				foreach ($acf_six as $product) {
 						$product_permalink = get_permalink($product->ID);
 						echo '<a href="' . esc_url($product_permalink) . '">';
-						echo '<div class="product">';
+						echo '<div class="home-product">';
+						echo '<div class="home-product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
 						echo '<h2>' . get_the_title($product->ID) . '</h2>';
-						echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
-						echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
+						echo '<div class="home-product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
 						echo '</div>';
 						echo '</a>';
 				}
@@ -99,10 +99,10 @@
 				foreach ($acf_seven as $product) {
 						$product_permalink = get_permalink($product->ID);
 						echo '<a href="' . esc_url($product_permalink) . '">';
-						echo '<div class="product">';
+						echo '<div class="subscription">';
 						echo '<h2>' . get_the_title($product->ID) . '</h2>';
-						echo '<div class="product-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
-						echo '<div class="product-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
+						echo '<div class="subscription-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
+						echo '<div class="subscription-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
 						echo '</div>';
 						echo '</a>';
 				}

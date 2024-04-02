@@ -2,8 +2,7 @@ nav.main-navigation {
     background-color: $color__brand-color;
     color: $color__text-header;
     box-shadow: 0 2px 4px $color__box-shadow;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 24px;
     display: flex; 
     justify-content: space-between; /* space between logo and hamburger menu */
     align-items: center; /* align items vertically */
@@ -92,7 +91,7 @@ button.menu-toggle {
     color: $color__text-header;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 75em) {
     .main-navigation.toggled {
         display: flex;
         justify-content: center; /* centers whole navigation */
@@ -146,7 +145,7 @@ button.menu-toggle {
     }
 }
 
-@media (min-width: 971px) {
+@media (min-width: 75em) {
     .main-navigation ul {
         display: flex; 
         justify-content: center; 
