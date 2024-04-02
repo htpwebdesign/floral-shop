@@ -68,12 +68,12 @@
 
 			<?php
 			if ($acf_five) {
-				echo '<div class="home_cta">';
 				echo '<a class="cta_link" href="' . $acf_five . '">';
+				echo '<div class="home_cta">';
 			}
 			if ($acf_four) {
 				echo '<p class="cta_text">' . $acf_four . '</p>';
-				echo '</a></div></div>';
+				echo '</div></div></a>';
 			}
 		
 			?>
