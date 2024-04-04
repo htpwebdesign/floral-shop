@@ -172,6 +172,16 @@ button.menu-toggle {
     }
 }
 
+@media (max-width: 27em) {
+    .logo {
+        width: 35%;
+    }
+}
+
+
+
+
+
 @media (min-width: 75em) {
     .main-navigation ul {
         display: flex;
