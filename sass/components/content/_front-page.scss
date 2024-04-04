@@ -181,13 +181,12 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 20px;
-	margin:
-
- 70px auto;
+	margin: 70px auto;
 	width: 70%;
 	max-width: 1200px;
 	background-color: $color__background;
 }
+
 
 .featured_products a {
 	text-decoration: none;
@@ -220,12 +219,6 @@
 
 .home-product h2, .home-product-price {
 	width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-	.featured_products {
-		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-	}
 }
 
 .home_subscription {

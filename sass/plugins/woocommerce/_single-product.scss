@@ -1,6 +1,6 @@
 .single-product .site .site-main {
     background-color: $color__background;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 40px 20px;
     width: 100%;
     max-width: 1200px;
@@ -25,9 +25,11 @@
             "gallery summary"
             "description description"
             "related related";
+
         @media screen and (min-width: 992px) {
             grid-template-columns: 1fr 1fr;
         }
+
         @media screen and (max-width: 991px) {
             grid-template-columns: 1fr;
             grid-template-areas:
@@ -39,10 +41,12 @@
 
         .woocommerce-product-gallery {
             grid-area: gallery;
+
             .woocommerce-product-gallery__wrapper {
                 .woocommerce-product-gallery__image {
                     a {
                         display: block;
+
                         img {
                             width: 100%;
                             height: auto;
@@ -54,23 +58,28 @@
             }
         }
 
-		.form-row {
-			padding: 1rem;
-			
-		}
+        .form-row {
+            padding: 1rem;
 
-		.quantity {
-			padding: 1rem;
-		}
+        }
+
+        .quantity {
+            padding: 1rem;
+        }
 
         .entry-summary {
             grid-area: summary;
+
             @media screen and (max-width: 768px) {
                 max-width: 100%;
             }
-            h1, .price, .woocommerce-product-details__short-description {
+
+            h1,
+            .price,
+            .woocommerce-product-details__short-description {
                 margin: 10px 0;
             }
+
             .single_add_to_cart_button {
                 background-color: $color__brand-color;
                 color: #ffffff;
@@ -79,6 +88,7 @@
                 font-size: 1rem;
                 border-radius: 20px;
                 transition: background-color 0.3s ease;
+
                 &:hover {
                     background-color: $color__text-body;
                 }
@@ -100,21 +110,25 @@
             margin-top: 60px;
             padding-top: 20px;
             border-top: 1px solid #eee;
+
             h2 {
                 font-size: 1.5rem;
                 margin-bottom: 30px;
                 color: #333;
             }
+
             .columns-3 {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
                 gap: 20px;
                 list-style: none;
+
                 li {
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
                     border-radius: 4px;
                     padding: 15px;
                     transition: transform 0.3s ease;
+
                     &:hover {
                         transform: translateY(-5px);
                     }
@@ -130,8 +144,10 @@
 }
 
 
+.woocommerce-product-gallery__trigger {
+    display: none;
+}
 
-
-
-
-
+.products.columns-3 {
+    padding-left: 0;
+}
