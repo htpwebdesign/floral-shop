@@ -50,7 +50,7 @@
 				</div>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 					<span class="hamburger-icon"></span>
-					<?php esc_html_e('', 'floral-shop'); ?>
+					<span class="screen-reader-text"><?php esc_html_e('Menu Toggle', 'floral-shop'); ?></span>
 				</button>
 
 				<?php
