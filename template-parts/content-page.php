@@ -79,8 +79,13 @@
 			?>
 
 			<?php
+			
 			if ($acf_six) {
+
+				echo '<h2 class="featured_products_title">Featured Products</h2>';
 				echo '<article class="featured_products">';
+				
+				
 				foreach ($acf_six as $product) {
 						$product_permalink = get_permalink($product->ID);
 						echo '<a href="' . esc_url($product_permalink) . '">';
@@ -93,8 +98,12 @@
 				}
 				echo '</article>';
 			}
+
+			
 			
 			if ($acf_seven) {
+
+				echo '<h2 class="featured_products_title">Subscriptions</h2>';
 				echo '<article class="home_subscription">';
 				foreach ($acf_seven as $product) {
 						$product_permalink = get_permalink($product->ID);
