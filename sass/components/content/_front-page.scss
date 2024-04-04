@@ -5,16 +5,11 @@
 .home_hero {
   position: relative;
   text-align: center;
-}
 
-@media screen and (min-width: 30em) {
-	.home_hero {
+	@media screen and (min-width: 30em) {
 		margin: 0 12px;
 	}
-}
-
-@media screen and (min-width: 48em) {
-	.home_hero {
+	@media screen and (min-width: 48em) {
 		margin: 0 24px;
 	}
 }
@@ -25,23 +20,15 @@
 	max-height: 65vh;
 	min-height: 14em;
 	object-fit: cover;
-}
 
-@media screen and (min-width: 30em) {
-	.home_banner img {
+	@media screen and (min-width: 30em) {
 		border-radius: 3.5px;
 	}
-}
-
-@media screen and (min-width: 48em) {
-	.home_banner img {
+	@media screen and (min-width: 48em) {
 		border-radius: 7.5px;
 	}
-}
-
-@media screen and (min-width: 120em) {
-	.home_banner img {
-		width: 117em;
+	@media screen and (min-width: 120em) {
+			width: 117em;
 	}
 }
 
@@ -61,44 +48,36 @@
 	border-bottom: 4px solid $color__text-body;
 	border-top: 2px solid $color__background;
 	z-index: 10;
-}
-
-@media screen and (min-width: 48em) {
-	.slogan {
+	display: none;
+	@media screen and (min-width: 25em) {
+		display: block;
+	}
+	@media screen and (min-width: 48em) {
 		top: 7%;
   	left: 9%;
 	}
-}
-
-@media screen and (min-width: 64em) {
-	.slogan {
-		font-size: $font__size-paragraph;
-		top: 12%;
-  	left: 14%;
+	@media screen and (min-width: 64em) {
+			font-size: $font__size-paragraph;
+			top: 12%;
+			left: 14%;
 	}
-}
-
-@media screen and (min-width: 100em) {
-	.slogan {
-		font-size: $font__size-title;
-		top: 2%;
-  	left: 4%;
+	@media screen and (min-width: 100em) {
+			font-size: $font__size-title;
+			top: 2%;
+			left: 4%;
 	}
-}
-
-@media screen and (min-width: 120em) {
-	.slogan {
+	@media screen and (min-width: 120em) {
 		font-size: $font__size-hero;
 	}
 }
 
 .blurb {
   position: absolute;
-	top: 50%;
+	top: 25%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: $font__h;
-	font-size: $font__size-paragraph;
+	font-size: $font__size-small;
 	color: $color__text-header;
 	background-color: $color__background-toggled-header;
 	box-shadow: 2px 2px $color__text-body;
@@ -109,18 +88,18 @@
 	width: 80%;
 	overflow: hidden;
 	z-index: 1;
-}
-
-@media screen and (min-width: 64em) {
-	.blurb {
+	@media screen and (min-width: 25em) {
+		top: 50%;
+	}
+	@media screen and (min-width: 40em) {
+		font-size: $font__size-paragraph;
+	}
+	@media screen and (min-width: 64em) {
 		width: 50%;
 		max-height: 10em;
 	}
-}
-
-@media screen and (min-width: 100em) {
-	.blurb {
-	font-size: $font__size-title;
+	@media screen and (min-width: 100em) {
+		font-size: $font__size-title;
 	}
 }
 
@@ -133,28 +112,19 @@
 	border-radius: 3px;
 	padding: 0.25em 0.5em;
 	z-index: 20;
-}
-
-@media screen and (min-width: 30em) {
-	.home_cta {
+	@media screen and (min-width: 30em) {
 		padding: 0.48em 0.75em;
 		bottom: 20px;
 		right: 50px;
 	}
-}
-
-@media screen and (min-width: 48em) {
-	.home_cta {
-		bottom: 20px;
-		right: 50px;
+	@media screen and (min-width: 48em) {
+			bottom: 20px;
+			right: 50px;
 	}
-}
-
-@media screen and (min-width: 64em) {
-	.home_cta {
-		bottom: 50px;
-		right: 175px;
-		font-size: $font__size-paragraph;
+	@media screen and (min-width: 64em) {
+			bottom: 50px;
+			right: 175px;
+			font-size: $font__size-paragraph;
 	}
 }
 
@@ -266,16 +236,15 @@
   font-size: 1.5em;
   font-weight: bold;
   margin: 20px 0;
+	@media screen and (min-width: 768px) {
+		padding: 60px;
+		.subscription-thumbnail img {
+			height: 300px;
+		}
+	}
 }
 
-@media screen and (min-width: 768px) {
-  .home_subscription .subscription {
-    padding: 60px;
-    .subscription-thumbnail img {
-      height: 300px;
-    }
-  }
-}
+
 
 
   

@@ -5,19 +5,15 @@ nav.main-navigation {
     padding: 15px 24px;
     display: flex;
     justify-content: space-between;
-    /* space between logo and hamburger menu */
     align-items: center;
-    /* align items vertically */
     width: 100%;
 }
 
 .logo {
     display: flex;
     justify-content: flex-start;
-    /* align logo to the left */
     align-items: center;
     flex-grow: 1;
-    /* allows the logo to take up necessary space */
 }
 
 .logo img {
@@ -35,7 +31,6 @@ button.menu-toggle {
     background: none;
     border: 0;
     margin-left: auto;
-    /* pushes the button to the right */
 }
 
 .hamburger-icon,
@@ -79,7 +74,6 @@ button.menu-toggle {
     margin: 0;
     padding: 0;
     display: none;
-    /* hide on default, show on toggle */
 }
 
 .main-navigation li {
@@ -105,12 +99,10 @@ button.menu-toggle {
     .main-navigation.toggled {
         display: flex;
         justify-content: center;
-        /* centers whole navigation */
         align-items: center;
         width: 100%;
         background-color: $color__background-toggled-header;
         box-shadow: 0 2px 5px $color__box-shadow;
-        /* add shadow for depth */
         padding: 20px;
         transition: all 0.3s ease;
     }
@@ -120,18 +112,13 @@ button.menu-toggle {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        /* ensures the ul takes the full width of the parent container */
         list-style: none;
-        /* remove bullet points from list items */
         padding: 0;
-        /* reset padding */
     }
 
     .main-navigation.toggled li {
         margin: 10px 0;
-        /* adjusts the vertical margin for each list item */
         transition: transform 0.3s ease;
-        /* smooth transition for hover effect */
     }
 
     .main-navigation.toggled li a {
@@ -140,7 +127,6 @@ button.menu-toggle {
         font-size: 16px;
         font-weight: $font__weight_h;
         padding: 10px 20px;
-        /* add padding to increase target area */
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
@@ -152,17 +138,14 @@ button.menu-toggle {
 
     .main-navigation.toggled li:hover {
         transform: scale(1.05);
-        /* slightly increase size on hover */
     }
 
 
     button.menu-toggle {
         position: absolute;
         right: 30px;
-        /* adds some space from the right edge */
         top: 50px;
         z-index: 100;
-        /* ensure it's above other content */
     }
 }
 
