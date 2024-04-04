@@ -222,11 +222,11 @@
 	width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-	.featured_products {
-		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-	}
-}
+// @media screen and (min-width: 768px) {
+// 	.featured_products {
+// 		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+// 	}
+// }
 
 .home_subscription {
   display: flex;
