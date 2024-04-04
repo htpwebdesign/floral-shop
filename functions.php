@@ -162,3 +162,49 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+function fwd_remove_admin_links() {
+	if ( !current_user_can( 'manage_options' ) ) {
+		remove_menu_page( 'edit.php' );           // Remove Posts link
+    		remove_menu_page( 'edit-comments.php' );  // Remove Comments link
+	}
+}
+add_action( 'admin_menu', 'fwd_remove_admin_links' );
+
+function my_login_logo() { ?>
+	<style type="text/css">
+			#login h1 a, .login h1 a {
+					background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/tfs-logo-sm.png);
+					height:80px;
+					width:80px;
+					background-size: 80px 80px;
+					background-repeat: no-repeat;
+			}
+			.login {
+				background-color: #f1e4de;
+			}
+			#loginform {
+				background-color: #315C4C;
+				border: 1px solid #2c2a2b;
+				color: #fff;
+			}
+			#wp-submit {
+				background-color: #2c2a2b;
+				border: 1px solid #000;
+			}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+	return 'The Flower Shop';
+}
+add_filter( 'login_headertext', 'my_login_logo_url_title' );
+
+add_editor_style();
+add_theme_support( 'editor-styles' );
