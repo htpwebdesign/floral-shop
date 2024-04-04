@@ -110,7 +110,7 @@
 						echo '<a href="' . esc_url($product_permalink) . '">';
 						echo '<div class="subscription">';
 						echo '<h2>' . get_the_title($product->ID) . '</h2>';
-						echo '<div class="subscription-thumbnail">' . get_the_post_thumbnail($product->ID, 'thumbnail') . '</div>';
+						echo '<div class="subscription-thumbnail">' . get_the_post_thumbnail($product->ID, 'medium') . '</div>';
 						echo '<div class="subscription-price">' . get_post_meta($product->ID, '_price', true) . '</div>';
 						echo '</div>';
 						echo '</a>';
