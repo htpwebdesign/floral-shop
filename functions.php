@@ -241,6 +241,6 @@ function dashboard_widget_function()
     // some echos to output the content
     echo "<p>Good luck with your website!</p>";
     // Correctly formatted embed URL
-    echo '<iframe width="485" height="300" src="' . esc_url('https://www.youtube.com/embed/mwccL7fKGVs') . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    echo '<iframe width="400" height="300" src="' . esc_url('https://www.youtube.com/embed/mwccL7fKGVs') . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
 }
 
