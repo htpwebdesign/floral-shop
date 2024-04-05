@@ -38,23 +38,18 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            flex: 0 1 300px; // Flex items can grow and shrink but start at a specific width
+            flex: 0 1 300px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 15px; // Padding around the content inside each li
-
-            // targeting images directly for spacing
+            padding: 15px; 
+            
             img {
-                margin-top: 20px; // adjust this value to increase or decrease white space above the image
+                margin-top: 20px; 
                 width: 100%; 
                 height: auto; 
                 object-fit: cover; 
             }
-
-            // &:not(:last-child) {
-            //     margin-bottom: 40px; 
-            // }
         }
     }
 }
@@ -92,5 +87,7 @@
     color: $color__brand-color;
 }
 
-
+.product-type-variable-subscription a .attachment-woocommerce_thumbnail {
+    max-width: 150px;
+}
 
